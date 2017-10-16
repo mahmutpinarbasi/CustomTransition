@@ -14,6 +14,10 @@
 		75609A4B1F938F0B00D4C606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75609A491F938F0B00D4C606 /* LaunchScreen.storyboard */; };
 		75609A561F938F0B00D4C606 /* CustomTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75609A551F938F0B00D4C606 /* CustomTransitionTests.swift */; };
 		75609A611F938F0B00D4C606 /* CustomTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75609A601F938F0B00D4C606 /* CustomTransitionUITests.swift */; };
+		75609A721F938F9600D4C606 /* CustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75609A711F938F9600D4C606 /* CustomTransitionDelegate.swift */; };
+		75609A741F938FC000D4C606 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75609A731F938FC000D4C606 /* ModelViewController.swift */; };
+		75609A761F938FE700D4C606 /* CustomStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75609A751F938FE700D4C606 /* CustomStoryboardSegue.swift */; };
+		75609A781F9390CE00D4C606 /* CustomTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75609A771F9390CE00D4C606 /* CustomTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		75609A5C1F938F0B00D4C606 /* CustomTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75609A601F938F0B00D4C606 /* CustomTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionUITests.swift; sourceTree = "<group>"; };
 		75609A621F938F0B00D4C606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75609A711F938F9600D4C606 /* CustomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionDelegate.swift; sourceTree = "<group>"; };
+		75609A731F938FC000D4C606 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		75609A751F938FE700D4C606 /* CustomStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoryboardSegue.swift; sourceTree = "<group>"; };
+		75609A771F9390CE00D4C606 /* CustomTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,14 @@
 		75609A3F1F938F0B00D4C606 /* CustomTransition */ = {
 			isa = PBXGroup;
 			children = (
+				75609A6E1F938F5300D4C606 /* Source */,
 				75609A401F938F0B00D4C606 /* AppDelegate.swift */,
 				75609A421F938F0B00D4C606 /* ViewController.swift */,
 				75609A441F938F0B00D4C606 /* Main.storyboard */,
 				75609A471F938F0B00D4C606 /* Assets.xcassets */,
 				75609A491F938F0B00D4C606 /* LaunchScreen.storyboard */,
 				75609A4C1F938F0B00D4C606 /* Info.plist */,
+				75609A731F938FC000D4C606 /* ModelViewController.swift */,
 			);
 			path = CustomTransition;
 			sourceTree = "<group>";
@@ -123,6 +133,16 @@
 				75609A621F938F0B00D4C606 /* Info.plist */,
 			);
 			path = CustomTransitionUITests;
+			sourceTree = "<group>";
+		};
+		75609A6E1F938F5300D4C606 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				75609A711F938F9600D4C606 /* CustomTransitionDelegate.swift */,
+				75609A751F938FE700D4C606 /* CustomStoryboardSegue.swift */,
+				75609A771F9390CE00D4C606 /* CustomTransitionAnimator.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75609A741F938FC000D4C606 /* ModelViewController.swift in Sources */,
+				75609A761F938FE700D4C606 /* CustomStoryboardSegue.swift in Sources */,
+				75609A721F938F9600D4C606 /* CustomTransitionDelegate.swift in Sources */,
 				75609A431F938F0B00D4C606 /* ViewController.swift in Sources */,
+				75609A781F9390CE00D4C606 /* CustomTransitionAnimator.swift in Sources */,
 				75609A411F938F0B00D4C606 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RHYY99TSR2;
 				INFOPLIST_FILE = CustomTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mahmutpinarbasi.CustomTransition;
@@ -441,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RHYY99TSR2;
 				INFOPLIST_FILE = CustomTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mahmutpinarbasi.CustomTransition;

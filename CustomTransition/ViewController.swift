@@ -12,14 +12,37 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func presentAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "showModal", sender: self)
+//        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "ModalNavigationController"){
+//            vc.transitioningDelegate = self
+//            self.present(vc, animated: true, completion: nil)
+//        }
+        
+    }
+    
+}
 
+extension ViewController:UIViewControllerTransitioningDelegate {
+    
+    
+    public func animationController(forPresented presented: UIViewController,
+                                    presenting: UIViewController,
+                                    source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        return CustomTransitionAnimator()
+    }
+    
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        return CustomTransitionAnimator()
+    }
+    
 }
 
